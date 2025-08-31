@@ -1,6 +1,8 @@
 local constants = require("constants")
 local settings = require("config.settings")
 
+sbar.add("event", constants.events.AEROSPACE_WORKSPACE_CHANGED)
+
 local spaces = {}
 
 local swapWatcher = sbar.add("item", {
@@ -20,7 +22,7 @@ local spaceConfigs <const> = {
   ["3"] = { icon = "", name = "Terminal" },
   ["4"] = { icon = "", name = "DB" },
   ["5"] = { icon = "󰙨", name = "Test" },
-  ["6"] = { icon = "", name = "Content Editor" },
+  ["6"] = { icon = "", name = "Content" },
   ["7"] = { icon = "", name = "Meet" },
   ["8"] = { icon = "󰊻", name = "Chat" },
   ["9"] = { icon = "", name = "Mail" },
@@ -66,7 +68,7 @@ local function addWorkspaceItem(workspaceName)
     background = {
       color = settings.colors.bg1,
     },
-    click_script = "aerospace workspace " .. workspaceName,
+    click_script = "aerospace workspace --fail-if-noop " .. workspaceName,
   })
 
   spaces[spaceName]:subscribe("mouse.entered", function(env)

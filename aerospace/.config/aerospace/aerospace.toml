@@ -16,7 +16,7 @@ after-startup-command = [
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+    'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
 on-focused-monitor-changed = [
@@ -147,6 +147,10 @@ run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.goland'
+run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.WebStorm'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]]

@@ -61,7 +61,8 @@ local function updateMenus()
     end
   end)
 
-  sbar.set(constants.items.MENU .. ".padding", { drawing = isShowingMenu })
+  -- TODO: fix padding property
+  -- sbar.set(constants.items.MENU .. ".padding", { drawing = isShowingMenu })
 end
 
 frontAppWatcher:subscribe(constants.events.FRONT_APP_SWITCHED, updateMenus)
