@@ -12,10 +12,10 @@ local padding <const> = {
 local graphics <const> = {
   bar = {
     height = 18,
-    offset = 12,
+    offset = 5,
   },
   background = {
-    height = 24,
+    height = 18,
     corner_radius = 9,
   },
   slider = {

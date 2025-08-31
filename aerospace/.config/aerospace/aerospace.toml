@@ -125,7 +125,7 @@ default-root-container-orientation = 'auto'
     inner.vertical =   10
     outer.left =       [{monitor.'^built-in retina display$' = 5 }, 10]
     outer.bottom =     [{monitor.'^built-in retina display$' = 5 }, 10]
-    outer.top =        [{monitor.'^built-in retina display$' = 10 }, 45]
+    outer.top =        [{monitor.'^built-in retina display$' = 0 }, 30]
     outer.right =      [{monitor.'^built-in retina display$' = 5 }, 10]
 
 [[on-window-detected]]
