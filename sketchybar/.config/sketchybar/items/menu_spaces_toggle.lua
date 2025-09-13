@@ -53,7 +53,7 @@ local function addToggle()
           color = { alpha = 0.0 },
           border_color = { alpha = 0.0 },
         },
-        icon = { color = settings.colors.white },
+        icon = { color = settings.colors.blue },
         label = { width = 0 }
       })
     end)

@@ -10,23 +10,23 @@ enable-normalization-opposite-orientation-for-nested-containers = false
 start-at-login = true
 
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
-  'exec-and-forget sketchybar'
+  # 'exec-and-forget borders',
+  # 'exec-and-forget sketchybar'
 ]
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-]
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
 
 on-focused-monitor-changed = [
   'move-mouse monitor-lazy-center'
 ]
 
 on-focus-changed = [
-  'move-mouse window-lazy-center',
-  'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
-  'exec-and-forget sketchybar --trigger update_windows'
+  # 'move-mouse window-lazy-center',
+  # 'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
+  # 'exec-and-forget sketchybar --trigger update_windows'
 ]
 
 accordion-padding = 5
@@ -69,9 +69,9 @@ default-root-container-orientation = 'auto'
     alt-f = 'fullscreen'
     alt-shift-f = 'macos-native-fullscreen'
 
-    alt-s = 'layout v_accordion' # 'layout stacking' in i3
-    alt-w = 'layout h_accordion' # 'layout tabbed' in i3
-    alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+    alt-ctrl-s = 'layout v_accordion' # 'layout stacking' in i3
+    alt-ctrl-w = 'layout h_accordion' # 'layout tabbed' in i3
+    alt-ctrl-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
     alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 
@@ -123,10 +123,10 @@ default-root-container-orientation = 'auto'
 [gaps]
     inner.horizontal = 10
     inner.vertical =   10
-    outer.left =       [{monitor.'^built-in retina display$' = 5 }, 10]
-    outer.bottom =     [{monitor.'^built-in retina display$' = 5 }, 10]
-    outer.top =        [{monitor.'^built-in retina display$' = 0 }, 30]
-    outer.right =      [{monitor.'^built-in retina display$' = 5 }, 10]
+    outer.left =       [{monitor.'^built-in retina display$' = 10 }, 20]
+    outer.bottom =     [{monitor.'^built-in retina display$' = 10 }, 20]
+    outer.top =        [{monitor.'^built-in retina display$' = 10 }, 20]
+    outer.right =      [{monitor.'^built-in retina display$' = 10 }, 20]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -138,6 +138,10 @@ run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.TextEdit'
 run = "layout floating"
 
 # Define workspaces for apps

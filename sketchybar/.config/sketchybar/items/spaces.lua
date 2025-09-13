@@ -17,16 +17,16 @@ local currentWorkspaceWatcher = sbar.add("item", {
 
 -- https://www.nerdfonts.com/cheat-sheet
 local spaceConfigs <const> = {
-  ["1"] = { icon = "󰖟", name = "Browser" },
-  ["2"] = { icon = "", name = "IDE" },
-  ["3"] = { icon = "", name = "Terminal" },
-  ["4"] = { icon = "", name = "DB" },
-  ["5"] = { icon = "󰙨", name = "Test" },
-  ["6"] = { icon = "", name = "Content" },
-  ["7"] = { icon = "", name = "Meet" },
-  ["8"] = { icon = "󰊻", name = "Chat" },
-  ["9"] = { icon = "", name = "Mail" },
-  ["10"] = { icon = "", name = "Music" },
+  ["1"] = { icon = "1", name = "Browser" },
+  ["2"] = { icon = "2", name = "IDE" },
+  ["3"] = { icon = "3", name = "Terminal" },
+  ["4"] = { icon = "4", name = "DB" },
+  ["5"] = { icon = "5", name = "Test" },
+  ["6"] = { icon = "6", name = "Content" },
+  ["7"] = { icon = "7", name = "Meet" },
+  ["8"] = { icon = "8", name = "Chat" },
+  ["9"] = { icon = "9", name = "Mail" },
+  ["10"] = { icon = "10", name = "Music" },
 }
 
 local function selectCurrentWorkspace(focusedWorkspaceName)
@@ -34,9 +34,9 @@ local function selectCurrentWorkspace(focusedWorkspaceName)
     if item ~= nil then
       local isSelected = sid == constants.items.SPACES .. "." .. focusedWorkspaceName
       item:set({
-        icon = { color = isSelected and settings.colors.bg1 or settings.colors.white },
-        label = { color = isSelected and settings.colors.bg1 or settings.colors.white },
-        background = { color = isSelected and settings.colors.white or settings.colors.bg1 },
+        icon = { color = isSelected and settings.colors.bg1 or settings.colors.blue },
+        label = { color = isSelected and settings.colors.bg1 or settings.colors.blue },
+        background = { color = isSelected and settings.colors.blue or settings.colors.bg1 },
       })
     end
   end
@@ -63,7 +63,7 @@ local function addWorkspaceItem(workspaceName)
     },
     icon = {
       string = spaceConfig.icon or settings.icons.apps["default"],
-      color = settings.colors.white,
+      color = settings.colors.blue,
     },
     background = {
       color = settings.colors.bg1,

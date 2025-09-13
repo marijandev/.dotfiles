@@ -13,7 +13,7 @@ local frontAppWatcher = sbar.add("item", {
 local function selectFocusedWindow(frontAppName)
   for appName, app in pairs(frontApps) do
     local isSelected = appName == frontAppName
-    local color = isSelected and settings.colors.orange or settings.colors.white
+    local color = isSelected and settings.colors.cyan or settings.colors.blue
     app:set(
       {
         label = { color = color },
@@ -40,12 +40,12 @@ local function updateWindows(windows)
 
     frontApps[windowName] = sbar.add("item", constants.items.FRONT_APPS .. "." .. windowName, {
       label = {
-        padding_left = 0,
+        padding_left = 5,
         string = windowName,
       },
       icon = {
         string = icon,
-        font = settings.fonts.icons(),
+        font = settings.fonts.icons(17),
       },
       click_script = "aerospace focus --window-id " .. windowId,
     })

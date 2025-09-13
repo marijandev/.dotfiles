@@ -96,7 +96,7 @@ local function toggleVolumeDetails(env)
         for device in string.gmatch(available, '[^\r\n]+') do
           local color = settings.colors.grey
           if current == device then
-            color = settings.colors.white
+            color = settings.colors.blue
           end
 
           sbar.add("item", constants.items.VOLUME .. ".device." .. counter, {
@@ -106,7 +106,7 @@ local function toggleVolumeDetails(env)
             click_script = 'SwitchAudioSource -s "' ..
                 device ..
                 '" && sketchybar --set /' .. constants.items.VOLUME .. '.device\\.*/ label.color=' ..
-                settings.colors.grey .. ' --set $NAME label.color=' .. settings.colors.white
+                settings.colors.grey .. ' --set $NAME label.color=' .. settings.colors.blue
 
           })
           counter = counter + 1
