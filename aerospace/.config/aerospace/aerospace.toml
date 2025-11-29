@@ -154,6 +154,10 @@ if.app-id = 'com.jetbrains.goland'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
 if.app-id = 'com.jetbrains.WebStorm'
 run = "move-node-to-workspace 2"
 
@@ -163,6 +167,10 @@ run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.datagrip'
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
@@ -187,6 +195,10 @@ run = "move-node-to-workspace 7"
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
+run = "move-node-to-workspace 8"
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
