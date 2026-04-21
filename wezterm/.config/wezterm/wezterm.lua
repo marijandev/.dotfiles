@@ -22,6 +22,14 @@ local config_misc = {
     -- TODO: this causes weird rendering problems for some reason
     -- figure out why
     -- default_gui_startup_args = { "connect", "unix" },
+
+    -- Extend PATH so spawned commands (like spf) can be found
+    set_environment_variables = {
+        PATH = os.getenv("HOME") .. "/go/bin"
+            .. ":/usr/local/bin"
+            .. ":/opt/homebrew/bin"
+            .. ":" .. (os.getenv("PATH") or ""),
+    },
 }
 
 ------------------------------------------

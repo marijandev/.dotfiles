@@ -123,10 +123,10 @@ default-root-container-orientation = 'vertical'
 [gaps]
     inner.horizontal = 10
     inner.vertical =   10
-    outer.left =       [{monitor.'^built-in retina display$' = 10 }, 20]
-    outer.bottom =     [{monitor.'^built-in retina display$' = 10 }, 20]
-    outer.top =        [{monitor.'^built-in retina display$' = 10 }, 20]
-    outer.right =      [{monitor.'^built-in retina display$' = 10 }, 20]
+    outer.left =       [{monitor.'^built-in retina display$' = 20 }, 30]
+    outer.bottom =     [{monitor.'^built-in retina display$' = 20 }, 30]
+    outer.top =        [{monitor.'^built-in retina display$' = 5 }, 10]
+    outer.right =      [{monitor.'^built-in retina display$' = 20 }, 30]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -151,6 +151,10 @@ run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.goland'
+run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id = 'com.google.antigravity'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
